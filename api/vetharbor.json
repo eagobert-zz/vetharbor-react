@@ -1,0 +1,342 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "userName": "Callahan",
+            "city": "Nashville",
+            "state": "TN",
+            "email": "callahan@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 2,
+            "userName": "Sandra",
+            "city": "Nashville",
+            "state": "TN",
+            "email": "sandra@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 3,
+            "userName": "Bentley",
+            "city": "Nashville",
+            "state": "TN",
+            "email": "bentley@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 4,
+            "userName": "Esperanza",
+            "city": "Nashville",
+            "state": "TN",
+            "email": "esperanza@gmail.com",
+            "password": "123456"
+        },
+        {
+            "id": 5,
+            "userName": "ErinA",
+            "city": "Nashville",
+            "state": "TN",
+            "email": "erina@gmail.com",
+            "password": "123456"
+        }
+    ],
+    "events": [
+        {
+            "id": "eventbriteId",
+            "userId": 3
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 5
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 1
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 2
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 5
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 2
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 1
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 2
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 4
+        },
+        {
+            "id": "eventbriteId",
+            "userId": 2
+        }
+    ],
+    "interests": [
+        {
+            "id": 1,
+            "userId": 5,
+            "keyword": "Hiking"
+        },
+        {
+            "id": 2,
+            "userId": 4,
+            "keyword": "Hiking"
+        },
+        {
+            "id": 3,
+            "userId": 3,
+            "keyword": "Yoga"
+        },
+        {
+            "id": 4,
+            "userId": 5,
+            "keyword": "Yoga"
+        },
+        {
+            "id": 5,
+            "userId": 3,
+            "keyword": "Horseback Riding"
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "userId": 5,
+            "location": "Castleton, MN"
+        },
+        {
+            "id": 2,
+            "userId": 1,
+            "location": "Barstow, MS"
+        },
+        {
+            "id": 3,
+            "userId": 4,
+            "location": "Muse, AL"
+        },
+        {
+            "id": 4,
+            "userId": 2,
+            "location": "Newkirk, MO"
+        },
+        {
+            "id": 5,
+            "userId": 5,
+            "location": "Canoochee, PR"
+        }
+    ],
+    "us_states": [
+        {
+          "id": 1,
+          "stateAbr": "AL"
+        },
+        {
+          "id": 2,
+          "stateAbr": "AK"
+        },
+        {
+          "id": 3,
+          "stateAbr": "AZ"
+        },
+        {
+          "id": 4,
+          "stateAbr": "AR"
+        },
+        {
+          "id": 5,
+          "stateAbr": "CA"
+        },
+        {
+          "id": 6,
+          "stateAbr": "CO"
+        },
+        {
+          "id": 7,
+          "stateAbr": "CT"
+        },
+        {
+          "id": 8,
+          "stateAbr": "DE"
+        },
+        {
+          "id": 9,
+          "stateAbr": "FL"
+        },
+        {
+          "id": 10,
+          "stateAbr": "GA"
+        },
+        {
+          "id": 11,
+          "stateAbr": "HI"
+        },
+        {
+          "id": 12,
+          "stateAbr": "ID"
+        },
+        {
+          "id": 13,
+          "stateAbr": "IL"
+        },
+        {
+          "id": 14,
+          "stateAbr": "IN"
+        },
+        {
+          "id": 15,
+          "stateAbr": "IA"
+        },
+        {
+          "id": 16,
+          "stateAbr": "KS"
+        },
+        {
+          "id": 17,
+          "stateAbr": "KY"
+        },
+        {
+          "id": 18,
+          "stateAbr": "LA"
+        },
+        {
+          "id": 19,
+          "stateAbr": "ME"
+        },
+        {
+          "id": 20,
+          "stateAbr": "MD"
+        },
+        {
+          "id": 21,
+          "stateAbr": "MA"
+        },
+        {
+          "id": 22,
+          "stateAbr": "MI"
+        },
+        {
+          "id": 23,
+          "stateAbr": "MN"
+        },
+        {
+          "id": 24,
+          "stateAbr": "MS"
+        },
+        {
+          "id": 25,
+          "stateAbr": "MO"
+        },
+        {
+          "id": 26,
+          "stateAbr": "MT"
+        },
+        {
+          "id": 27,
+          "stateAbr": "NE"
+        },
+        {
+          "id": 28,
+          "stateAbr": "NV"
+        },
+        {
+          "id": 29,
+          "stateAbr": "NH"
+        },
+        {
+          "id": 30,
+          "stateAbr": "NJ"
+        },
+        {
+          "id": 31,
+          "stateAbr": "NM"
+        },
+        {
+          "id": 32,
+          "stateAbr": "NY"
+        },
+        {
+          "id": 33,
+          "stateAbr": "NC"
+        },
+        {
+          "id": 34,
+          "stateAbr": "ND"
+        },
+        {
+          "id": 35,
+          "stateAbr": "OH"
+        },
+        {
+          "id": 36,
+          "stateAbr": "OK"
+        },
+        {
+          "id": 37,
+          "stateAbr": "OR"
+        },
+        {
+          "id": 38,
+          "stateAbr": "PA"
+        },
+        {
+          "id": 39,
+          "stateAbr": "RI"
+        },
+        {
+          "id": 40,
+          "stateAbr": "SC"
+        },
+        {
+          "id": 41,
+          "stateAbr": "SD"
+        },
+        {
+          "id": 42,
+          "stateAbr": "TN"
+        },
+        {
+          "id": 43,
+          "stateAbr": "TX"
+        },
+        {
+          "id": 44,
+          "stateAbr": "UT"
+        },
+        {
+          "id": 45,
+          "stateAbr": "VT"
+        },
+        {
+          "id": 46,
+          "stateAbr": "VA"
+        },
+        {
+          "id": 47,
+          "stateAbr": "WA"
+        },
+        {
+          "id": 48,
+          "stateAbr": "WV"
+        },
+        {
+          "id": 49,
+          "stateAbr": "WI"
+        },
+        {
+          "id": 50,
+          "stateAbr": "WY"
+        }
+      ]
+}
