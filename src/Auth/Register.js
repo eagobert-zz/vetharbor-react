@@ -1,5 +1,6 @@
 //Purpose:  Component to register a new user
 import React, { Component } from 'react'
+import State from './States'
 
 class Register extends Component {
 
@@ -63,13 +64,31 @@ class Register extends Component {
 
             })
     }.bind(this)
+
+
     
     render() {
 
         return (
-            <div>
-                <form>
-                    
+            <div className="form-register">
+
+                <h1 className="">Sign-Up</h1>
+
+                <form onSubmit={this.handleRegister}>
+
+                {/* Input for userName */}
+                <label className="">User Name:</label>
+                <input className="" type="text" name="userName" onChange={this.handleFieldChange}></input>
+
+                {/* Input for city */}
+                <label className="">City:</label>
+                <input className="" type="text" name="city" onChange={this.handleFieldChange}></input>
+
+                {/* Input for state */}
+                <label className="">State:</label>
+                <State />
+                {/* <input className="" type="text" name="city" onChange={this.handleFieldChange}></input> */}
+
                 </form>
 
             </div>);
