@@ -32,6 +32,7 @@ class Register extends Component {
             .then(r => r.json())
             .then(user => {
                 // If a user length exists. Set local storage, and show home view
+                   
                 if (user.length) {
                     this.props.setActiveUser(user[0].id)
                     //this.props.showView("home")
@@ -52,11 +53,13 @@ class Register extends Component {
                             password: this.state.password
                         })
                     })
+                    .then(r => r.json())
 
-                        // Set local storage with newly created user's id and show home view
-                        .then(newUser => {
+                    // Set local storage with newly created user's id and show home view
+                    .then(newUser => {
+                            console.log(newUser)
                             this.props.setActiveUser(newUser.id)
-                           // this.props.showView("home")
+                            //this.props.showView("home")
                         })
                 }
 
