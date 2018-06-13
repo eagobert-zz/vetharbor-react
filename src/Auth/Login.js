@@ -2,15 +2,6 @@ import React, { Component } from 'react'
 
 class Login extends Component {
 
-    //Set initial state of a new user
-    // constructor(props) {
-    //     super(props)
-    //     this.state = {
-    //         email: "",
-    //         password: ""
-    //     }
-    // }
-
     //function to manage changes to input field
     handleFieldChange = function (e) {
         this.setState({
@@ -30,7 +21,7 @@ class Login extends Component {
                    
                 if (user.length) {
 
-                    this.props.setActiveUser(JSON.stringify(user[0]))
+                    this.props.setActiveUser(user[0])
                     this.props.showView("home")
 
                 // If user doesn't exist in API

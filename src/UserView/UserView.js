@@ -8,7 +8,7 @@ class UserView extends Component{
     render(){
         return(
         <div>
-            <Navbar />
+            <Navbar activeUser={this.props.activeUser}/>
         </div>)
     }
 }

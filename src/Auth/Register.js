@@ -4,17 +4,6 @@ import React, { Component } from 'react'
 
 class Register extends Component {
 
-    //Set initial state of a new user
-    constructor(props) {
-        super(props)
-        this.state = {
-            username: "",
-            city: "",
-            state: "",
-            email: "",
-            password: ""
-        }
-    }
 
     //function to manage changes to input field
     handleFieldChange = function (e) {
@@ -70,7 +59,7 @@ render() {
 
     return (
         <form onSubmit={this.handleRegister}>
-        
+
             <h1>Sign-Up</h1>
 
             {/* Input for userName */}

@@ -28,14 +28,19 @@ class App extends Component {
   //function to set active user
   setActiveUser = (val) => {
     if (val) {
-      localStorage.setItem("ActiveUser", val)
+      localStorage.setItem("ActiveUser", JSON.stringify({
+        id: val.id,
+        username: val.username
+      }))
     } else {
       localStorage.removeItem("ActiveUser")
     }
 
     //sets new state if value
     this.setState({
-      activeUser: val
+      activeUser: {
+        id: val.id,
+        username: val.username}
     })
   }
 
@@ -79,7 +84,7 @@ class App extends Component {
         return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
 
       case "home":
-      default: return <UserView activeUser={this.state.activeUser} currentState={this.state}/>
+      default: return <UserView activeUser={this.state.activeUser} />
     }
    
   }
