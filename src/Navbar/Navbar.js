@@ -9,6 +9,11 @@ class Navbar extends Component {
             this.props.showView("logout")
         }.bind(this)
 
+        handleEditProfile = function(e) {
+            e.preventDefault()
+            this.props.showView("profile")
+        }.bind(this)
+
     render(){
         const UserName = this.props.activeUser.username
         return(
