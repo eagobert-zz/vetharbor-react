@@ -70,6 +70,8 @@ render() {
 
     return (
         <form onSubmit={this.handleRegister}>
+        
+            <h1>Sign-Up</h1>
 
             {/* Input for userName */}
             <label className="">User Name: </label>

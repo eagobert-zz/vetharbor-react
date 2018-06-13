@@ -81,28 +81,7 @@ class App extends Component {
       case "home":
       default: return <Home activeUser={this.state.activeUser} currentState={this.state}/>
     }
-    // //if "ActiveUser" DOES NOT exist show register view
-    // if (localStorage.getItem("ActiveUser") === null) {
-    //   return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
-
-    //   //If "ActiveUser" DOES exist show view as indicated
-    // } else {
-
-    //   switch (this.state.currentView) {
-
-    //     case "logout":
-    //       return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
-
-    //     case "login":
-    //       return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
-
-    //     case "register":
-    //       return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
-
-    //     case "home":
-    //     default: return <Home activeUser={this.state.activeUser} currentState={this.state}/>
-    //   }
-    // }
+   
   }
 
   render() {

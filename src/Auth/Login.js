@@ -49,6 +49,7 @@ render() {
     return (
         <form onSubmit={this.handleLogin}>
 
+            <h1>Log-In</h1>
 
             {/* Input for email */}
             <label className="">Email: </label>
@@ -63,7 +64,11 @@ render() {
             <br />
 
             {/* Submit Button */}
-            <button className="" type="submit">Register</button>
+            <button className="" type="submit">Log In</button>
+
+            <p>New to VETHarbor?</p>
+            <h4><a href="">Register as a new user </a></h4>
+
 
         </form>
     )
