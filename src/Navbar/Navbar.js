@@ -15,6 +15,8 @@ class Navbar extends Component {
         <div className="navbar">
             <nav>
                 <div>Hello {UserName} !</div>
+
+                <button onClick={this.handleEditProfile}> Edit Profile </button>
                 <button onClick={this.handleLogout}> Logout </button>
             </nav>
         </div>);
