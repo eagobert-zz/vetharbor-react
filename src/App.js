@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import Login from './Auth/Login'
 import Register from './Auth/Register'
-import Home from './Home/Home'
+import UserView from './UserView/UserView'
 import './App.css';
 
 class App extends Component {
@@ -79,7 +79,7 @@ class App extends Component {
         return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
 
       case "home":
-      default: return <Home activeUser={this.state.activeUser} currentState={this.state}/>
+      default: return <UserView activeUser={this.state.activeUser} currentState={this.state}/>
     }
    
   }
