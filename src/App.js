@@ -32,16 +32,19 @@ class App extends Component {
         id: val.id,
         username: val.username
       }))
+
+      //sets new state if value
+      this.setState({
+        activeUser: {
+          id: val.id,
+          username: val.username
+        }
+      })
+
     } else {
       localStorage.removeItem("ActiveUser")
     }
 
-    //sets new state if value
-    this.setState({
-      activeUser: {
-        id: val.id,
-        username: val.username}
-    })
   }
 
   //function to create trigger event for view change
@@ -57,11 +60,6 @@ class App extends Component {
       view = e
     }
 
-    // If user clicked logout in nav, empty local storage and update activeUser state
-    if (view === "logout") {
-      this.setActiveUser(null)
-    }
-
     // Update state to render correct view
     this.setState({
       currentView: view
@@ -75,24 +73,24 @@ class App extends Component {
     switch (this.state.currentView) {
 
       case "logout":
-        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "login":
-        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "register":
-        return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+        return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "home":
-      default: return <UserView activeUser={this.state.activeUser} />
+      default: return <UserView activeUser={this.state.activeUser} showView={this.showView} currentState={this.state} />
     }
-   
+
   }
 
   render() {
     return (
       <div className="App">
-      
+
         {this.View()}
 
       </div>

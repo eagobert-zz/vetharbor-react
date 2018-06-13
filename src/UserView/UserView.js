@@ -5,10 +5,11 @@ import Navbar from '../Navbar/Navbar'
 //import Search from '../Search/Search'
 
 class UserView extends Component{
+    
     render(){
         return(
         <div>
-            <Navbar activeUser={this.props.activeUser}/>
+            <Navbar activeUser={this.props.activeUser} showView={this.props.showView} currentState={this.props.currentState}/>
         </div>)
     }
 }
