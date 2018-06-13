@@ -39,6 +39,14 @@
       "state": "TN",
       "email": "erina@gmail.com",
       "password": "123456"
+    },
+    {
+      "username": "eagobert",
+      "city": "Nashville",
+      "state": "TN",
+      "email": "eagobert@hotmail.com",
+      "password": "123456",
+      "id": 6
     }
   ],
   "events": [
