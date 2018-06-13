@@ -27,19 +27,19 @@ class Register extends Component {
     handleRegister = function (e) {
         e.preventDefault()
 
-        // ??? Determine if a user already exists in API
+        // Determine if a user already exists in API
         fetch(`http://localhost:8088/users?email=${this.state.email}`)
             .then(r => r.json())
             .then(user => {
+
                 // If a user length exists. Set local storage, and show home view
-                   
                 if (user.length) {
                     this.props.setActiveUser(user[0].id)
-                    //this.props.showView("home")
+                    this.props.showView("home")
 
                 // If user doesn't exist in API
                 } else {
-                    // Create user in API
+                    // Create new user in API
                     fetch("http://localhost:8088/users", {
                         method: "POST",
                         headers: {
@@ -59,7 +59,7 @@ class Register extends Component {
                     .then(newUser => {
                             console.log(newUser)
                             this.props.setActiveUser(newUser.id)
-                            //this.props.showView("home")
+                            this.props.showView("home")
                         })
                 }
 

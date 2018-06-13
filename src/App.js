@@ -14,7 +14,12 @@ class App extends Component {
 
     //set initial state of app 
     this.state = {
-      currentView: "register",
+      username: "",
+      city: "",
+      state: "",
+      email: "",
+      password: "",
+      currentView: "login",
       activeUser: localStorage.getItem("ActiveUser")
     }
 
@@ -62,25 +67,42 @@ class App extends Component {
   //function to set new view
   View = () => {
 
-    //if "ActiveUser" DOES NOT exist show register view
-    if (localStorage.getItem("ActiveUser") === null) {
-      return <Register showView={this.showView} setActiveUser={this.setActiveUser} />
+    switch (this.state.currentView) {
 
-      //If "ActiveUser" DOES exist show view as indicated
-    } else {
+      case "logout":
+        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
 
-      switch (this.state.currentView) {
+      case "login":
+        return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
 
-        case "logout":
-          return <Login showView={this.showView} setActiveUser={this.setActiveUser} />
+      case "register":
+        return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
 
-        // case "results":
-        //     return <SearchResults terms={this.state.searchTerms} />
-
-        case "home":
-        default: return <Home activeUser={this.state.activeUser} />
-      }
+      case "home":
+      default: return <Home activeUser={this.state.activeUser} currentState={this.state}/>
     }
+    // //if "ActiveUser" DOES NOT exist show register view
+    // if (localStorage.getItem("ActiveUser") === null) {
+    //   return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+
+    //   //If "ActiveUser" DOES exist show view as indicated
+    // } else {
+
+    //   switch (this.state.currentView) {
+
+    //     case "logout":
+    //       return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+
+    //     case "login":
+    //       return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+
+    //     case "register":
+    //       return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state}/>
+
+    //     case "home":
+    //     default: return <Home activeUser={this.state.activeUser} currentState={this.state}/>
+    //   }
+    // }
   }
 
   render() {
