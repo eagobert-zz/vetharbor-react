@@ -14,7 +14,7 @@ class App extends Component {
 
     //set initial state of app 
     this.state = {
-      currentView: "login",
+      currentView: "register",
       activeUser: localStorage.getItem("ActiveUser")
     }
 
