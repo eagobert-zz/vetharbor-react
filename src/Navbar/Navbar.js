@@ -7,6 +7,7 @@ class Navbar extends Component {
         handleLogout = function(e) {
             e.preventDefault()
             this.props.showView("logout")
+            localStorage.removeItem("ActiveUser")
         }.bind(this)
 
         handleEditProfile = function(e) {

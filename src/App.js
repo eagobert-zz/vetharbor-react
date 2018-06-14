@@ -41,10 +41,7 @@ class App extends Component {
         }
       })
 
-    } else {
-      localStorage.removeItem("ActiveUser")
-    }
-
+    } 
   }
 
   //function to create trigger event for view change
@@ -69,8 +66,14 @@ class App extends Component {
 
   //function to set new view
   View = () => {
+    const ActiveUser = localStorage.getItem("ActiveUser")
 
-    switch (this.state.currentView) {
+    if(ActiveUser !== null){
+      return <UserView activeUser={this.state.activeUser} showView={this.showView} currentState={this.state} />
+
+    } else {
+      
+      switch (this.state.currentView) {
 
       case "logout":
         return <Login showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
@@ -82,8 +85,9 @@ class App extends Component {
         return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "home":
-      default: return <UserView activeUser={this.state.activeUser} showView={this.showView} currentState={this.state} />
+      default: return <UserView activeUser={this.state.activeUser} setActiveUser={this.setActiveUser} showView={this.showView} currentState={this.state} />
     }
+  }
 
   }
 
