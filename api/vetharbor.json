@@ -1,20 +1,4 @@
 {
-  "photos": [
-    {
-      "id": 1,
-      "userId": 5,
-      "url": ""
-    },
-    {
-      "url": "blob:http://localhost:3000/305c215f-5f62-47e7-9e4a-aca30b472e35",
-      "id": 2
-    },
-    {
-      "userId": 6,
-      "url": "blob:http://localhost:3000/dc398100-95e5-4c21-803c-cad5207b4ff0",
-      "id": 3
-    }
-  ],
   "users": [
     {
       "id": 1,

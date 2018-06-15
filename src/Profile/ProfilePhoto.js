@@ -2,15 +2,16 @@ import React, { Component } from 'react'
 
 class ProfilePhoto extends Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
         this.state = {
-            file: null
+            imgUrl: ""
         }
     }
+    ActiveUser = JSON.parse(this.props.activeUser)
 
-    handleImageUpload = function(e){
-
+    handleImageUpload = function (e) {
+        
         //get the image file
         const selectedFile = e.target.files[0]
 
@@ -18,35 +19,28 @@ class ProfilePhoto extends Component {
         const imgData = window.URL.createObjectURL(selectedFile)
 
         this.setState({
-            file: imgData
+            imgUrl: imgData
         })
         console.log(imgData)
     }.bind(this)
 
-    handleImageSave = function(e){
+    handleImageSave = function (e) {
         e.preventDefault();
-        //const ActiveUser = this.props.activeUser.id
 
-        fetch("http://localhost:8088/photos", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                userId: this.props.activeUser.id,
-                url: this.state.file
-            })
-        })
-    }.bind(this)
+        //Save data to local storage.  Then create a component did mount to set state for imgUrl to local storage
 
-    render(){
-        return(
+    }
+    .bind(this)
+
+
+    render() {
+        return (
             <div className="profile-photo">
                 <div className="img-preview">
-
+                    <img src={this.state.imgUrl} alt="" />
                 </div>
-                <form  id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
-                    <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload}/>
+                <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
+                    <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
                     <button type="submit" value="Submit!">Upload</button>
                 </form>
             </div>

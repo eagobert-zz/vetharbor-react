@@ -1,3 +1,10 @@
 .profile{
     border: 2px solid purple;
+    max-width: 300px;
+}
+
+.img-preview,
+img {
+    max-height: 175px;
+    max-width: 175px;
 }
