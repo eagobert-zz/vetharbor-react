@@ -10,19 +10,34 @@ class ProfilePhoto extends Component {
     }
 
     handleImageUpload = function(e){
+
+        //get the image file
         const selectedFile = e.target.files[0]
+
         //need to convert to acceptable format for posting...
         const imgData = window.URL.createObjectURL(selectedFile)
 
         this.setState({
             file: imgData
         })
-        //console.log(this.state)
+        console.log(imgData)
     }.bind(this)
 
     handleImageSave = function(e){
-        e.preventDefault();  
-    }
+        e.preventDefault();
+        //const ActiveUser = this.props.activeUser.id
+
+        fetch("http://localhost:8088/photos", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                userId: this.props.activeUser.id,
+                url: this.state.file
+            })
+        })
+    }.bind(this)
 
     render(){
         return(

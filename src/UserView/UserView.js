@@ -9,8 +9,8 @@ class UserView extends Component{
     render(){
         return(
         <div>
-            <Navbar activeUser={this.props.activeUser} showView={this.props.showView} setActiveUser={this.props.setActiveUser} currentState={this.props.currentState}/>
-            <Profile />
+            <Navbar activeUser={this.props.activeUser} showView={this.props.showView} setActiveUser={this.setActiveUser} currentState={this.props.currentState}/>
+            <Profile activeUser={this.props.activeUser}/>
             <Events />
             <Search />
         </div>)
