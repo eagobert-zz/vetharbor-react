@@ -1,4 +1,11 @@
 {
+  "photos": [
+    {
+      "id": 1,
+      "userId": 5,
+      "url": ""
+    }
+  ],
   "users": [
     {
       "id": 1,
