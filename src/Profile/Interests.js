@@ -23,9 +23,8 @@ class Interests extends Component {
             console.log(this.state)
         })
     }
-    //Map through interests
-
-    //Display results
+    
+    //Map through interests and display results
     render(){
         return(
             <div className="interests">

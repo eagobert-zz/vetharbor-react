@@ -3,14 +3,15 @@
     max-width: 300px;
 }
 
-.img-preview,
+
 img {
     max-height: 175px;
     max-width: 175px;
 }
 
 .interests,
-.locations {
+.locations,
+.img-preview {
     height: 250px;
     width: 250px;
     border: 2px solid purple;
