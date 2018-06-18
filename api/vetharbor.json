@@ -109,13 +109,18 @@
     },
     {
       "id": 4,
-      "userId": 5,
+      "userId": 6,
       "keyword": "Yoga"
     },
     {
       "id": 5,
-      "userId": 3,
+      "userId": 6,
       "keyword": "Horseback Riding"
+    },
+    {
+      "id": 5,
+      "userId": 6,
+      "keyword": "Art Therapy"
     }
   ],
   "locations": [
