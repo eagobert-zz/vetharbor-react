@@ -9,10 +9,10 @@ class Profile extends Component {
 
         return(
         <div className="profile">
-        <h3>Profile</h3>
-        <ProfilePhoto />
-        <Locations />
-        <Interests />
+            <h3>Profile</h3>
+            <ProfilePhoto />
+            <Locations />
+            <Interests />
         </div>)
         
     }

@@ -39,8 +39,9 @@ class ProfilePhoto extends Component {
 
     componentDidMount() {
 
-     let ProfileImage = JSON.parse(localStorage.getItem("ProfileImage"))
+     let ProfileImage = localStorage.getItem("ProfileImage").substring(5)
      console.log(ProfileImage)
+     console.log(this.state.imgUrl)
 
     }
 
@@ -50,7 +51,8 @@ class ProfilePhoto extends Component {
         return (
             <div className="profile-photo">
                 <div className="img-preview">
-                    <img src={this.state.imgUrl} alt="" />
+                    <img src="http://placehold.it/175x175" alt="" />
+                    {/* <img src={this.state.imgUrl} alt="" /> */}
                 </div>
 
                 <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>

@@ -23,11 +23,12 @@ class Interests extends Component {
             console.log(this.state)
         })
     }
-    
+
     //Map through interests and display results
     render(){
         return(
             <div className="interests">
+            <h4>Interests</h4>
                 {this.state.interests.map(interest => {
                    return <span key={interest.id}>{interest.keyword}, </span>
                 })}

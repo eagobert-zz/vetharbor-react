@@ -26,6 +26,7 @@ class Locations extends Component {
     render(){
         return(
             <div className="locations">
+            <h4>Locations</h4>
                 {this.state.locations.map(location => {
                    return <span key={location.id}>{location.location}, </span>
                 })}
