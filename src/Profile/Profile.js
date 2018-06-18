@@ -10,7 +10,7 @@ class Profile extends Component {
         return(
         <div className="profile">
         <h3>Profile</h3>
-        <ProfilePhoto activeUser={this.props.activeUser}/>
+        <ProfilePhoto />
         {/* <Locations />
         <Interests /> */}
         </div>)

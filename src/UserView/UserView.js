@@ -6,11 +6,12 @@ import Search from '../Search/Search'
 
 class UserView extends Component{
     
+
     render(){
         return(
         <div>
-            <Navbar activeUser={this.props.activeUser} showView={this.props.showView} setActiveUser={this.setActiveUser} currentState={this.props.currentState}/>
-            <Profile activeUser={this.props.activeUser}/>
+            <Navbar showView={this.props.showView}/>
+            <Profile />
             <Events />
             <Search />
         </div>)

@@ -21,7 +21,10 @@ class Login extends Component {
                    
                 if (user.length) {
 
-                    this.props.setActiveUser(user[0])
+                    this.props.setActiveUser({
+                        id: user[0].id,
+                        username: user[0].username
+                    })
                     this.props.showView("home")
 
                 // If user doesn't exist in API

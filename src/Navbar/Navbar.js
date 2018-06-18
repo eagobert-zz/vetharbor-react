@@ -16,11 +16,13 @@ class Navbar extends Component {
         }.bind(this)
 
     render(){
-        const UserName = this.props.activeUser.username
+        const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
+        const UserName = ActiveUser.username
+
         return(
         <div className="navbar">
             <nav>
-                <div>Hello {UserName} !</div>
+                <div>Hello {UserName}!</div>
 
                 <button onClick={this.handleEditProfile}> Edit Profile </button>
                 <button onClick={this.handleLogout}> Logout </button>

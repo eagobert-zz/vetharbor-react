@@ -2,16 +2,15 @@ import React, { Component } from 'react'
 
 class ProfilePhoto extends Component {
 
-    constructor(props) {
+    constructor(props){
         super(props)
         this.state = {
-            imgUrl: ""
+            imgUrl: localStorage.getItem("ProfileImage") || ""
         }
     }
-    ActiveUser = JSON.parse(this.props.activeUser)
 
-    handleImageUpload = function (e) {
-        
+    handleImageUpload = function(e){
+
         //get the image file
         const selectedFile = e.target.files[0]
 
@@ -24,23 +23,34 @@ class ProfilePhoto extends Component {
         console.log(imgData)
     }.bind(this)
 
-    handleImageSave = function (e) {
+    handleImageSave = function(e){
         e.preventDefault();
+        
+        const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
 
-        //Save data to local storage.  Then create a component did mount to set state for imgUrl to local storage
+        //on submit, imgUrl will be saved to localstorage
+        localStorage.setItem("ProfileImage", JSON.stringify({
+            id: ActiveUser.id,
+            url: this.state.imgUrl
+        }))
+    }.bind(this)
+    
+    // shouldComponentUpdate(){
+    //     const ProfileImage = localStorage.getItem("ProfileImage")
+    //     this.setState({
+    //         imgUrl: ProfileImage.url
+    //     })
+    // }
 
-    }
-    .bind(this)
 
-
-    render() {
-        return (
+    render(){
+        return(
             <div className="profile-photo">
                 <div className="img-preview">
-                    <img src={this.state.imgUrl} alt="" />
+                <img src={this.state.imgUrl} alt=""/>
                 </div>
-                <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
-                    <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
+                <form  id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
+                    <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload}/>
                     <button type="submit" value="Submit!">Upload</button>
                 </form>
             </div>

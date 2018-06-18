@@ -20,7 +20,7 @@ class App extends Component {
       email: "",
       password: "",
       currentView: "login",
-      activeUser: localStorage.getItem("ActiveUser")
+      //activeUser: localStorage.getItem("ActiveUser")
     }
 
   }
@@ -33,13 +33,13 @@ class App extends Component {
         username: val.username
       }))
 
-      //sets new state if value
-      this.setState({
-        activeUser: {
-          id: val.id,
-          username: val.username
-        }
-      })
+      // //sets new state if value
+      // this.setState({
+      //   activeUser: {
+      //     id: val.id,
+      //     username: val.username
+      //   }
+      // })
 
     } 
   }
@@ -69,7 +69,7 @@ class App extends Component {
     const ActiveUser = localStorage.getItem("ActiveUser")
 
     if(ActiveUser !== null){
-      return <UserView activeUser={this.state.activeUser} showView={this.showView} currentState={this.state} />
+      return <UserView showView={this.showView} currentState={this.state} />
 
     } else {
       
@@ -85,7 +85,7 @@ class App extends Component {
         return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "home":
-      default: return <UserView activeUser={this.state.activeUser} setActiveUser={this.setActiveUser} showView={this.showView} currentState={this.state} />
+      default: return <UserView setActiveUser={this.setActiveUser} showView={this.showView} currentState={this.state} />
     }
   }
 
