@@ -29,7 +29,9 @@ class Interests extends Component {
     render(){
         return(
             <div className="interests">
-
+                {this.state.interests.map(interest => {
+                   return <span key={interest.id}>{interest.keyword}, </span>
+                })}
             </div>
         )
     }
