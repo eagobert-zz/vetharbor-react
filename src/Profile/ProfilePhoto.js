@@ -35,12 +35,12 @@ class ProfilePhoto extends Component {
         e.preventDefault();
         alert("Your profile image has saved!")
  
-    }.bind(this)
+    }
 
     componentDidMount() {
 
      let ProfileImage = JSON.parse(localStorage.getItem("ProfileImage"))
-     //console.log(ProfileImage)
+     console.log(ProfileImage)
 
     }
 
