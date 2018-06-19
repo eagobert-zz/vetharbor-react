@@ -19,8 +19,7 @@ class App extends Component {
       state: "",
       email: "",
       password: "",
-      currentView: "login",
-      //activeUser: localStorage.getItem("ActiveUser")
+      currentView: "login"
     }
 
   }
@@ -33,13 +32,6 @@ class App extends Component {
         username: val.username
       }))
 
-      // //sets new state if value
-      // this.setState({
-      //   activeUser: {
-      //     id: val.id,
-      //     username: val.username
-      //   }
-      // })
 
     } 
   }

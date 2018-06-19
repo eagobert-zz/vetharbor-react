@@ -1,7 +1,11 @@
 .profile{
     border: 2px solid purple;
-    max-width: 300px;
+    width: 400px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
 }
+
 img {
     max-height: 175px;
     max-width: 175px;

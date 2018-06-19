@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Event from '../Events/Event'
 import '../Search/Search.css'
 
 class Search extends Component {
@@ -19,9 +20,8 @@ handleSearch = (evt) => {
 
 handleSubmit = (evt) => {
     evt.preventDefault();
-    //alert(`Your search for ${this.state.searchInput} has been submitted`)
 
- //create a fetch request from the eventbrite api.  use interpolation to input keyword from search
+    //create a fetch request from the eventbrite api.  use interpolation to input keyword from search
     fetch(`https://www.eventbriteapi.com/v3/events/search/?token=DSOBPDFILDDO4LF47MRJ&q="veteran", "recreational therapy","${this.state.searchInput}"`)
     .then(r => r.json())
     .then(results => {
@@ -30,11 +30,12 @@ handleSubmit = (evt) => {
         })
         console.log(this.state)
     })
- //convert data to json
-
- //return display results in render below
 
 }
+
+// handleScroll = (evt) => {
+//     console.log(evt.target.value)
+// }
 
     render(){
 
@@ -49,7 +50,7 @@ handleSubmit = (evt) => {
             
             <div className="search-display">
             {this.state.searchResults.map(event => {
-               return <li key={event.id}>{event.name.text}</li>
+               return <li key={event.id}><Event event={event}/><button>Save</button></li>
             })}
          
             </div>

@@ -1,12 +1,13 @@
 #root {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    justify-content: center;
 }
 
-.navbar{
+/* .navbar{
     border: 2px solid purple;
     display: flex;
-}
+} */
 
 .display{
     display: flex;
