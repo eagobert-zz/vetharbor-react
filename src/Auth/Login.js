@@ -38,6 +38,10 @@ class Login extends Component {
             })
     }.bind(this)
 
+    handleRegisterLink = (evt) => {
+        this.props.showView("register")
+    }
+
 render() {
 
     return (
@@ -61,7 +65,7 @@ render() {
             <button className="" type="submit">Log In</button>
 
             <p>New to VETHarbor?</p>
-            <h4><a href="">Register as a new user </a></h4>
+            <h4><a href="#" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
 
 
         </form>
