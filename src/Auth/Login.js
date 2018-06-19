@@ -38,6 +38,7 @@ class Login extends Component {
     }.bind(this)
 
     handleRegisterLink = (evt) => {
+        evt.preventDefault()
         this.props.showView("register")
     }
 
