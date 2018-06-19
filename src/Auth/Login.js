@@ -32,7 +32,6 @@ class Login extends Component {
                     
                     this.props.setActiveUser(null)
                     this.props.showView("register")
-
                 }
 
             })
@@ -65,7 +64,7 @@ render() {
             <button className="" type="submit">Log In</button>
 
             <p>New to VETHarbor?</p>
-            <h4><a href="#" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
+            <h4><a href="" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
 
 
         </form>

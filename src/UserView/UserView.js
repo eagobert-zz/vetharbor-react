@@ -8,6 +8,9 @@ import '../UserView/UserView.css'
 
 class UserView extends Component{
     
+    handleEventSave = (evt) => {
+        //console.log(evt.currentTarget)
+    }
 
     render(){
         return(
@@ -17,7 +20,7 @@ class UserView extends Component{
 
             <div className="display">
                 <Profile />
-                <Search />
+                <Search handleEventSave={this.handleEventSave}/>
                 <EventList />
             </div>
            
