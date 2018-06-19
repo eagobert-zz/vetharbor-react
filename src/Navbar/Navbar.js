@@ -20,7 +20,7 @@ class Navbar extends Component {
         const UserName = ActiveUser.username
 
         return(
-        <div className="navbar">
+        <div className="navbar-container">
             <nav>
                 <div>Hello {UserName}!</div>
 

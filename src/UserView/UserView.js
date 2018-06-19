@@ -13,9 +13,7 @@ class UserView extends Component{
         return(
         <div className="user-view">
 
-            <div className="navbar">
                 <Navbar showView={this.props.showView}/>
-            </div>
 
             <div className="display">
                 <Profile />
@@ -23,7 +21,8 @@ class UserView extends Component{
                 <EventList />
             </div>
            
-        </div>)
+        </div>
+        )
     }
 }
 

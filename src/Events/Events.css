@@ -2,14 +2,3 @@
     border: 2px solid purple;
     max-width: 300px;
 }
-
-.search{
-    display: flex;
-    flex-direction: column
-}
-
-.search-input,
-.search-display{
-    border: 2px solid purple;
-    /* max-width: 300px; */
-}
