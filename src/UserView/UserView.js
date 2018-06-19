@@ -9,7 +9,7 @@ import '../UserView/UserView.css'
 class UserView extends Component{
     
     handleEventSave = (evt) => {
-        //console.log(evt.currentTarget)
+        console.log(evt.currentTarget.id)
     }
 
     render(){
