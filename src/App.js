@@ -61,7 +61,7 @@ class App extends Component {
     const ActiveUser = localStorage.getItem("ActiveUser")
 
     if(ActiveUser !== null){
-      return <UserView showView={this.showView} currentState={this.state} />
+      return <UserView showView={this.showView} />
 
     } else {
       
@@ -77,7 +77,7 @@ class App extends Component {
         return <Register showView={this.showView} setActiveUser={this.setActiveUser} currentState={this.state} />
 
       case "home":
-      default: return <UserView setActiveUser={this.setActiveUser} showView={this.showView} currentState={this.state} />
+      default: return <UserView setActiveUser={this.setActiveUser} showView={this.showView}  />
     }
   }
 

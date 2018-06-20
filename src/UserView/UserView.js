@@ -9,6 +9,20 @@ import '../UserView/UserView.css'
 class UserView extends Component{
     
     handleEventSave = (evt) => {
+        const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
+
+        //fetch events and post user's saved events
+        fetch("http://localhost:8088/events", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                id: evt.currentTarget.id,
+                userId: ActiveUser.id
+            })
+        })
+
         console.log(evt.currentTarget.id)
     }
 

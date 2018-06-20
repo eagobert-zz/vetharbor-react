@@ -18,8 +18,6 @@ class ProfilePhoto extends Component {
         //need to convert to acceptable format for posting...
         const imgData = window.URL.createObjectURL(selectedFile)
 
-        //const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
-
         localStorage.setItem("ProfileImage", JSON.stringify(imgData))
 
         this.setState({
@@ -37,13 +35,6 @@ class ProfilePhoto extends Component {
  
     }
 
-    componentDidMount() {
-
-     let ProfileImage = localStorage.getItem("ProfileImage").substring(5)
-     console.log(ProfileImage)
-     console.log(this.state.imgUrl)
-
-    }
 
 
     render() {
