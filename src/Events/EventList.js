@@ -12,28 +12,60 @@ class EventList extends Component {
 
     //Create a function to load active user's saved events in api
     loadEvents = () => {
+        const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
 
         //Get active user's events from vetharbor.json
+        fetch(`http://localhost:8088/events?userId=${ActiveUser.id}`)
         
-        //Loop thru the events and for each event
+        //convert get to json data
+        .then(r => r.json())
 
-        //Then make a get request to eventbrite
+        .then(allEvents => {
+            let events = []
+            //for each event tied to active user's id, loop thru and ...
+            allEvents.forEach(event => {
+                
+                //make a fetch request to eventbrite with the event's id
+                fetch(`https://www.eventbriteapi.com/v3/events/${event.id}/?token=DSOBPDFILDDO4LF47MRJ`)
 
-        //Set state of user events
+                //convert response to json
+                .then(r => r.json())
+
+                //return the data???
+                .then(ue => {
+                    events.push(ue)
+                    this.setState({
+                        userEvents: events
+                    }, () => {
+                       // console.log("events!!!!!", this.state.userEvents)
+        
+                    })
+                })
+            })
+            
+        })
 
     }
     
 
     //run the function in a component did mount
     componentDidMount(){
+        console.log("component did mount")
         this.loadEvents()
     }
 
     render() {
 
+        console.log("render called", this.state.userEvents)
         return (
             <div className="event-list">
-                
+            <h3>These are events</h3>
+            {this.state.userEvents.map(ues => {
+               return <div>
+                   <h1 key={ues.id}>{ues.name.text}</h1>
+                </div>
+            })}
+            
             </div>
             );
 

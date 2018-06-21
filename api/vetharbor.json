@@ -47,6 +47,14 @@
       "email": "eagobert@hotmail.com",
       "password": "123456",
       "id": 6
+    },
+    {
+      "username": "SamFrodo",
+      "city": "Nashville",
+      "state": "TN",
+      "email": "samfrodo@gmail.com",
+      "password": "123456",
+      "id": 7
     }
   ],
   "events": [
@@ -60,6 +68,34 @@
     },
     {
       "id": "43196289264",
+      "userId": 6
+    },
+    {
+      "id": "45845924394",
+      "userId": 6
+    },
+    {
+      "id": "45842318609",
+      "userId": 6
+    },
+    {
+      "id": "44754727595",
+      "userId": 6
+    },
+    {
+      "id": "45862944301",
+      "userId": 6
+    },
+    {
+      "id": "47237524708",
+      "userId": 6
+    },
+    {
+      "id": "45354554694",
+      "userId": 6
+    },
+    {
+      "id": "46948823194",
       "userId": 6
     }
   ],

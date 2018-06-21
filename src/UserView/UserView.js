@@ -18,12 +18,12 @@ class UserView extends Component{
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                id: evt.currentTarget.id,
+                id: (evt.currentTarget.id),
                 userId: ActiveUser.id
             })
         })
 
-        console.log(evt.currentTarget.id)
+        console.log("event target id", evt.currentTarget.id)
     }
 
     render(){

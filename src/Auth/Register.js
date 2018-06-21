@@ -47,7 +47,7 @@ class Register extends Component {
                     // Set local storage with newly created user's id and show home view
                     .then(newUser => {
                             console.log(newUser)
-                            this.props.setActiveUser(newUser.id)
+                            this.props.setActiveUser(newUser)
                             this.props.showView("home")
                         })
                 }

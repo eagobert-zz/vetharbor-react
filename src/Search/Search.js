@@ -47,7 +47,7 @@ handleSubmit = (evt) => {
             
             <div className="search-display">
             {this.state.searchResults.map(event => {
-               return <li key={event.id}><Event event={event}/><button id={event.id}onClick={this.props.handleEventSave}>Save</button></li>
+               return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
             })}
          
             </div>
