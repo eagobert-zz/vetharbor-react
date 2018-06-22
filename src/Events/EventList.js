@@ -36,9 +36,6 @@ class EventList extends Component {
                     events.push(ue)
                     this.setState({
                         userEvents: events
-                    }, () => {
-                       // console.log("events!!!!!", this.state.userEvents)
-        
                     })
                 })
             })
@@ -46,7 +43,12 @@ class EventList extends Component {
         })
 
     }
-    
+
+    componentDidUpdate(nextState){
+        if(this.state.userEvents !== nextState.userEvents){
+            return true;
+        }
+    }
 
     //run the function in a component did mount
     componentDidMount(){
@@ -57,13 +59,12 @@ class EventList extends Component {
     render() {
 
         console.log("render called", this.state.userEvents)
+        
         return (
             <div className="event-list">
             <h3>These are events</h3>
             {this.state.userEvents.map(ues => {
-               return <div>
-                   <h1 key={ues.id}>{ues.name.text}</h1>
-                </div>
+               return <h1 key={ues.id}>{ues.name.text}</h1>
             })}
             
             </div>
