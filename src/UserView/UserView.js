@@ -7,6 +7,12 @@ import '../UserView/UserView.css'
 
 
 class UserView extends Component{
+    constructor(props){
+        super(props)
+        this.state = {
+            eventId: ''
+        }
+    }
     
     handleEventSave = (evt) => {
         const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
@@ -22,6 +28,12 @@ class UserView extends Component{
                 userId: ActiveUser.id
             })
         })
+        .then(r => r.json())
+        .then(event => {
+            this.setState({
+                eventId: event.id
+            })
+        })
 
         console.log("event target id", evt.currentTarget.id)
     }
@@ -35,7 +47,7 @@ class UserView extends Component{
             <div className="display">
                 <Profile />
                 <Search handleEventSave={this.handleEventSave}/>
-                <EventList />
+                <EventList key={this.state.eventId}/>
             </div>
            
         </div>

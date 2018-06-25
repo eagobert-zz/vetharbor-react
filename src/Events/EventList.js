@@ -43,18 +43,6 @@ class EventList extends Component {
             })
     }
 
-    
-    shouldComponentUpdate(nextProps, nextState) {
-        if (this.state.userEvents !== nextState.userEvents) {
-            return true
-        }
-
-    }
-
-    componentDidUpdate() {
-     this.loadEvents()
-    }
-
     //run the function in a component did mount
     componentDidMount() {
         console.log("component did mount")
