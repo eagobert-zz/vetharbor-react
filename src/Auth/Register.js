@@ -39,7 +39,8 @@ class Register extends Component {
                             city: this.state.city,
                             state: this.state.state,
                             email: this.state.email,
-                            password: this.state.password
+                            password: this.state.password,
+                            imgUrl: null
                         })
                     })
                     .then(r => r.json())

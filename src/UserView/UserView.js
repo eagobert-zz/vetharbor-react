@@ -10,12 +10,13 @@ class UserView extends Component{
     constructor(props){
         super(props)
         this.state = {
-            eventId: ''
+            eventId: '',
+            ActiveUser: JSON.parse(localStorage.getItem("ActiveUser"))
         }
     }
     
+    
     handleEventSave = (evt) => {
-        const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
 
         //fetch events and post user's saved events
         fetch("http://localhost:8088/events", {
@@ -25,7 +26,7 @@ class UserView extends Component{
             },
             body: JSON.stringify({
                 id: (evt.currentTarget.id),
-                userId: ActiveUser.id
+                userId: this.ActiveUser.id
             })
         })
         .then(r => r.json())
@@ -45,7 +46,7 @@ class UserView extends Component{
                 <Navbar showView={this.props.showView}/>
 
             <div className="display">
-                <Profile />
+                <Profile key={this.state.ActiveUser.id}/>
                 <Search handleEventSave={this.handleEventSave}/>
                 <EventList key={this.state.eventId}/>
             </div>
