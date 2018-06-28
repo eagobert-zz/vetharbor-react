@@ -7,7 +7,9 @@ class Search extends Component {
         super(props)
         this.state = {
             searchInput: "",
-            searchResults: []
+            searchResults: [],
+            onLoadSearchResults: [],
+            userCity: ""
         }
     }
 
@@ -22,7 +24,7 @@ handleSubmit = (evt) => {
     evt.preventDefault();
 
     //create a fetch request from the eventbrite api.  use interpolation to input keyword from search
-    fetch(`https://www.eventbriteapi.com/v3/events/search/?token=DSOBPDFILDDO4LF47MRJ&q="veteran", "recreational therapy","${this.state.searchInput}"`)
+    fetch(`https://www.eventbriteapi.com/v3/events/search/?token=DSOBPDFILDDO4LF47MRJ&q="veteran", "therapy","${this.state.searchInput}"`)
     .then(r => r.json())
     .then(results => {
         this.setState({
@@ -31,6 +33,28 @@ handleSubmit = (evt) => {
         console.log(this.state)
     })
 
+}
+
+//on load fetch search from eventbrite based on user's location
+componentDidMount(){
+    //get active user
+    const ActiveUser = JSON.parse(localStorage.getItem("ActiveUser"))
+
+    //fetch user's home location from vetharbor api
+    fetch(`http://localhost:8088/users/${ActiveUser.id}`)
+    .then(r => r.json())
+    .then(user => {
+        this.setState({
+            userCity: user.city
+        })
+        return fetch(`https://www.eventbriteapi.com/v3/events/search/?location.address=${this.state.userCity}&token=DSOBPDFILDDO4LF47MRJ&q="veterans","therapy"`)
+    })
+    .then(r => r.json())
+    .then(results => {
+        this.setState({
+            onLoadSearchResults: results.top_match_events
+        })
+    })
 }
 
 
@@ -46,9 +70,13 @@ handleSubmit = (evt) => {
             </div>
             
             <div className="search-display">
-            {this.state.searchResults.map(event => {
-               return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
+            {this.state.onLoadSearchResults.map(event => {
+                return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
             })}
+
+            {/* {this.state.searchResults.map(event => {
+               return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
+            })} */}
          
             </div>
         </div>);
