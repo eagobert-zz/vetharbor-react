@@ -26,7 +26,7 @@ class UserView extends Component{
             },
             body: JSON.stringify({
                 id: (evt.currentTarget.id),
-                userId: this.ActiveUser.id
+                userId: this.state.ActiveUser.id
             })
         })
         .then(r => r.json())

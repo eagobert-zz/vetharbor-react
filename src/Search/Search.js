@@ -70,6 +70,7 @@ componentDidMount(){
             </div>
             
             <div className="search-display">
+            
             {this.state.searchResults.length === 0 &&
                 this.state.onLoadSearchResults.map(event => {
                 return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
