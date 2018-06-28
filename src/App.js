@@ -5,6 +5,8 @@ import Login from './Auth/Login'
 import Register from './Auth/Register'
 import UserView from './UserView/UserView'
 import './App.css';
+import 'typeface-roboto'
+import "font-awesome/css/font-awesome.css"
 
 class App extends Component {
 
