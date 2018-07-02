@@ -3,6 +3,12 @@
     font-family: 'shrikhand', sans-serif;
 }
 
+#greeting,
+#username {
+    color: slategrey;
+    font-family: 'Raleway', sans-serif;
+}
+
 #navbar{
     background-color: white;
 }

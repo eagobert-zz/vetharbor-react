@@ -35,10 +35,10 @@ class Navbar extends Component {
                             <Grid item>
                                 <Grid container direction="row" spacing={8} alignItems="center">
                                     <Grid item>
-                                        <Typography className="greeting" variant="headline">Hello</Typography>
+                                        <Typography id="greeting" variant="headline">Hello</Typography>
                                     </Grid>
                                     <Grid item>
-                                        <Typography className="username" variant="headline">{UserName}!</Typography>
+                                        <Typography id="username" variant="headline">{UserName}!</Typography>
                                     </Grid>
                                 </Grid>
                                 
