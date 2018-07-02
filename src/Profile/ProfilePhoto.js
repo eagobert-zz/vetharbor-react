@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Grid } from '@material-ui/core'
 
 class ProfilePhoto extends Component {
 
@@ -70,7 +71,7 @@ class ProfilePhoto extends Component {
             )
         } else {
             return (
-                <div className="profile-photo">
+                <Grid container className="profile-photo">
                     <div className="img-preview">
                         <img src={this.state.imgUrl} alt="" />
                     </div>
@@ -79,7 +80,7 @@ class ProfilePhoto extends Component {
                         <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
                         <button type="submit" value="Submit!">Upload</button>
                     </form>
-                </div>
+                </Grid>
             )
         }
     }

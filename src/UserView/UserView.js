@@ -4,6 +4,7 @@ import Profile from '../Profile/Profile'
 import EventList from '../Events/EventList'
 import Search from '../Search/Search'
 import '../UserView/UserView.css'
+import { Grid } from '@material-ui/core'
 
 
 class UserView extends Component{
@@ -41,17 +42,16 @@ class UserView extends Component{
 
     render(){
         return(
-        <div className="user-view">
+        <Grid container className="user-view" spacing={40}>
 
+                {/* These components are grid items */}
                 <Navbar showView={this.props.showView}/>
-
-            <div className="display">
                 <Profile key={this.state.ActiveUser.id}/>
                 <Search handleEventSave={this.handleEventSave}/>
                 <EventList key={this.state.eventId}/>
-            </div>
+   
            
-        </div>
+        </Grid>
         )
     }
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import '../Events/Events.css'
+import { Grid, Typography } from '@material-ui/core'
 
 class EventList extends Component {
 
@@ -52,13 +53,19 @@ class EventList extends Component {
     render() {
 
         return (
-            <div className="event-list">
-                <h3>These are events</h3>
-                {this.state.userEvents.map(ues => {
-                    return <h1 key={ues.id}>{ues.name.text}</h1>
-                })}
+            <Grid item className="event-list">
+                <Grid container direction="column">
+                    <Grid item>
+                        <Typography>These are events</Typography>
+                    </Grid>
+                    <Grid item>
+                         {this.state.userEvents.map(ues => {
+                                return <Typography key={ues.id}>{ues.name.text}</Typography>
+                         })}
+                    </Grid>
+                </Grid>
 
-            </div>
+            </Grid>
         );
 
     }

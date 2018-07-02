@@ -1,15 +1,10 @@
-#root {
+/* #root {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-/* .navbar{
-    border: 2px solid purple;
-    display: flex;
-} */
-
 .display{
     display: flex;
-    border: 2px solid purple;
-}
+    padding-top: 100px;
+} */

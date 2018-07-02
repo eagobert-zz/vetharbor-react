@@ -3,17 +3,21 @@ import ProfilePhoto from '../Profile/ProfilePhoto'
 import Locations from './Locations'
 import Interests from './Interests'
 import '../Profile/Profile.css'
+import { Grid, Typography } from '@material-ui/core'
 
 class Profile extends Component {
     render(){
 
         return(
-        <div className="profile">
-            <h3>Profile</h3>
-            <ProfilePhoto />
-            <Locations />
-            <Interests />
-        </div>)
+        <Grid item className="profile">
+                <Grid container direction="column">
+                <Typography variant="subheading">Profile</Typography>
+                <ProfilePhoto />
+                <Locations />
+                <Interests />
+                </Grid>
+            
+        </Grid>)
         
     }
 }

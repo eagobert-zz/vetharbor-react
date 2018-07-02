@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Event from '../Events/Event'
 import '../Search/Search.css'
+import { Grid } from '@material-ui/core'
 
 class Search extends Component {
     constructor(props){
@@ -61,30 +62,30 @@ componentDidMount(){
     render(){
 
         return(
-        <div className="search">
-            <div className="search-input">
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" onChange={this.handleSearch}/>
-                    <button>Enter</button>
-                </form>
-            </div>
-            
-            <div className="search-display">
-            
-            {this.state.searchResults.length === 0 &&
-                this.state.onLoadSearchResults.map(event => {
-                return <li key={event.id}><Event event={event}/><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
-            })}
+        <Grid item>
+            <Grid className="search" container direction="column">
+                    <Grid item className="search-input">
+                        <form onSubmit={this.handleSubmit}>
+                            <input type="text" onChange={this.handleSearch} />
+                            <button>Enter</button>
+                        </form>
+                    </Grid>
 
-                    {this.state.searchResults.length > 0 &&
-                        this.state.searchResults.map(event => {
-                            return <li key={event.id}><Event event={event} /><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
-                        })
+                    <Grid item className="search-display">
 
-                    }
-         
-            </div>
-        </div>);
+                        {this.state.searchResults.length === 0 &&
+                            this.state.onLoadSearchResults.map(event => {
+                                return <li key={event.id}><Event event={event} /><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
+                            })}
+
+                        {this.state.searchResults.length > 0 &&
+                            this.state.searchResults.map(event => {
+                                return <li key={event.id}><Event event={event} /><button id={event.id} onClick={this.props.handleEventSave}>Save</button></li>
+                            })
+                        }
+                    </Grid>
+            </Grid>
+        </Grid>);
         
     }
 }
