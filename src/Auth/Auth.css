@@ -3,7 +3,8 @@
     background-color: #fff;
     border-radius: 4px;
     border: 1px solid #ced4da;
-    margin: 10px;
+    /* margin: 0;
+    padding: 0; */
 }
 
 #input-email:focus,
@@ -17,11 +18,16 @@
 #login-title {
     color: grey;
     font-family: 'Raleway', sans-serif;
+    padding-bottom: 15px;
 }
 
 #form-login {
-    padding: 15px 20px;
+    padding: 50px 100px;
     box-shadow: -2px 7px 32px 16px rgba(0,0,0,0.35);
     border-radius: 5px;
     background-color: white;
+}
+
+.form-fields {
+    padding: 5px;
 }

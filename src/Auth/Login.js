@@ -52,27 +52,27 @@ class Login extends Component {
         return (
             <div>
                 <Header />
-                <form onSubmit={this.handleLogin}>
-                    <Grid container id="form-login" justify="center">
+                <form id="form-login" onSubmit={this.handleLogin}>
+                    <Grid container justify="center" direction="column" spacing={24}>
                         <Grid item>
                             <Typography id="login-title" variant="title">Log-In</Typography>
                         </Grid>
 
                         <Grid container direction="column">
-                            <Grid container>
-                                <Grid item>
+                            <Grid container className="form-fields" alignItems="center" spacing={8}>
+                                <Grid item xs={4}>
                                     <InputLabel>Email: </InputLabel>
                                 </Grid>
-                                <Grid item>
-                                    <Input id="input-email" type="email" name="email" autoComplete="email" onChange={this.handleFieldChange} disableUnderline></Input>
+                                <Grid item xs={8}>
+                                    <Input id="input-email" type="email" name="email" autoComplete="email" onChange={this.handleFieldChange} disableUnderline fullWidth></Input>
                                 </Grid>
                             </Grid>
-                            <Grid container>
-                                <Grid item>
+                            <Grid container className="form-fields" alignItems="center" spacing={8}>
+                                <Grid item xs={4}>
                                     <InputLabel>Password: </InputLabel>
                                 </Grid>
-                                <Grid item>                            
-                                    <Input id="input-password" type="password" name="password" autoComplete="new-password" onChange={this.handleFieldChange} disableUnderline></Input>
+                                <Grid item xs={8}>                            
+                                    <Input id="input-password" type="password" name="password" autoComplete="new-password" onChange={this.handleFieldChange} disableUnderline fullWidth></Input>
                                 </Grid>
                             </Grid>
                             <Grid item>                            
@@ -80,9 +80,12 @@ class Login extends Component {
                             </Grid>
                         </Grid>
 
-
-                        <p>New to VETHarbor?</p>
-                        <h4><a href="" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
+                        <Grid item>
+                            <Typography variant="body1">New to VETHarbor?</Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant="subheading"><a href="" onClick={this.handleRegisterLink}>Register as a new user </a></Typography>
+                        </Grid>
                     </Grid>
                 </form>
 
