@@ -1,19 +1,12 @@
-
-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding: 30px 25px;
-    border: 2px solid purple;
-}
-
-nav > div,
-nav > button {
-    margin: 10px;
-    padding: 5px;
-}
-
 #header-mini {
-    color: white;
+    color: purple;
     font-family: 'shrikhand', sans-serif;
+}
+
+#navbar{
+    background-color: white;
+}
+
+.icon {
+    color: purple;
 }

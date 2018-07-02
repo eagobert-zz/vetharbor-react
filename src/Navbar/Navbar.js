@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import '../Navbar/Navbar.css'
-import { AppBar, Button, Grid, Toolbar, Typography } from '@material-ui/core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { AppBar, Grid, IconButton, Toolbar, Typography } from '@material-ui/core'
 
 class Navbar extends Component {
 
@@ -22,7 +23,7 @@ class Navbar extends Component {
 
         return(
         <div className="navbar-container">
-            <AppBar>
+            <AppBar id="navbar">
 
                 <Toolbar>
                     <Grid container direction="row">
@@ -30,12 +31,28 @@ class Navbar extends Component {
                             <Typography id="header-mini" variant="display1">VETHarbor</Typography>
                         </Grid>
                     </Grid>
-                    <Grid container direction="row" justify="flex-end">
-                            <Typography>Hello {UserName}!</Typography>
-
-                            <Button onClick={this.handleEditProfile}> Edit Profile </Button>
-
-                            <Button onClick={this.handleLogout}> Logout </Button>
+                    <Grid container direction="row" justify="flex-end" alignItems="center" spacing={24}>
+                            <Grid item>
+                                <Grid container direction="row" spacing={8} alignItems="center">
+                                    <Grid item>
+                                        <Typography className="greeting" variant="headline">Hello</Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography className="username" variant="headline">{UserName}!</Typography>
+                                    </Grid>
+                                </Grid>
+                                
+                            </Grid>
+                            <Grid item>
+                                <IconButton className="button-icon" onClick={this.handleEditProfile}> 
+                                    <FontAwesomeIcon className="icon" icon="user-cog" size="lg"/>
+                                </IconButton>
+                            </Grid>
+                            <Grid item>
+                                <IconButton className="button-icon" onClick={this.handleLogout}> 
+                                    <FontAwesomeIcon className="icon" icon="sign-out-alt" size="lg"/>
+                                </IconButton>
+                            </Grid>
                     </Grid>
 
                 </Toolbar>

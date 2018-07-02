@@ -8,7 +8,12 @@ import './App.css';
 import 'typeface-roboto'
 import 'typeface-shrikhand'
 import 'typeface-raleway'
-import "font-awesome/css/font-awesome.css"
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
+import { faUserCog } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faSignOutAlt)
+library.add(faUserCog)
 
 class App extends Component {
 
