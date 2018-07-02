@@ -1,0 +1,17 @@
+#header {
+    color: white;
+    font-family: 'shrikhand', sans-serif;
+}
+#subheader {
+    color: white;
+    font-family: 'raleway', sans-serif;
+}
+
+#login-title {
+    padding-top: 15px;
+}
+
+.heading {
+    margin-top: 105px;
+    margin-bottom: 70px;
+}

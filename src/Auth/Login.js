@@ -1,4 +1,9 @@
 import React, { Component } from 'react'
+import Header from '../Header/Header'
+import '../Auth/Auth.css'
+import { Button, Grid, Input, InputLabel, Typography } from '@material-ui/core'
+
+
 
 class Login extends Component {
 
@@ -18,7 +23,7 @@ class Login extends Component {
             .then(r => r.json())
             .then(user => {
                 // If a user length exists. Set local storage, and show home view
-                   
+
                 if (user.length) {
 
                     this.props.setActiveUser({
@@ -27,9 +32,9 @@ class Login extends Component {
                     })
                     this.props.showView("home")
 
-                // If user doesn't exist in API
+                    // If user doesn't exist in API
                 } else {
-                    
+
                     this.props.setActiveUser(null)
                     this.props.showView("register")
                 }
@@ -42,36 +47,49 @@ class Login extends Component {
         this.props.showView("register")
     }
 
-render() {
+    render() {
 
-    return (
-        <form onSubmit={this.handleLogin}>
+        return (
+            <div>
+                <Header />
+                <form onSubmit={this.handleLogin}>
+                    <Grid container id="form-login" justify="center">
+                        <Grid item>
+                            <Typography id="login-title" variant="title">Log-In</Typography>
+                        </Grid>
 
-            <h1>Log-In</h1>
+                        <Grid container direction="column">
+                            <Grid container>
+                                <Grid item>
+                                    <InputLabel>Email: </InputLabel>
+                                </Grid>
+                                <Grid item>
+                                    <Input id="input-email" type="email" name="email" autoComplete="email" onChange={this.handleFieldChange} disableUnderline></Input>
+                                </Grid>
+                            </Grid>
+                            <Grid container>
+                                <Grid item>
+                                    <InputLabel>Password: </InputLabel>
+                                </Grid>
+                                <Grid item>                            
+                                    <Input id="input-password" type="password" name="password" autoComplete="new-password" onChange={this.handleFieldChange} disableUnderline></Input>
+                                </Grid>
+                            </Grid>
+                            <Grid item>                            
+                                <Button variant="contained" size="large" type="submit" fullWidth>Log In</Button>
+                            </Grid>
+                        </Grid>
 
-            {/* Input for email */}
-            <label className="">Email: </label>
-            <input className="" type="email" name="email" autoComplete="email" onChange={this.handleFieldChange}></input>
 
-            <br />
+                        <p>New to VETHarbor?</p>
+                        <h4><a href="" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
+                    </Grid>
+                </form>
 
-            {/* Input for password */}
-            <label className="">Password: </label>
-            <input className="" type="password" name="password" autoComplete="new-password" onChange={this.handleFieldChange}></input>
+            </div>
+        )
 
-            <br />
-
-            {/* Submit Button */}
-            <button className="" type="submit">Log In</button>
-
-            <p>New to VETHarbor?</p>
-            <h4><a href="" onClick={this.handleRegisterLink}>Register as a new user </a></h4>
-
-
-        </form>
-    )
-
-}
+    }
 }
 
 export default Login

@@ -1,0 +1,27 @@
+#input-email,
+#input-password {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    margin: 10px;
+}
+
+#input-email:focus,
+#input-password:focus {
+    border-color: rgb(110, 9, 110);
+    box-shadow: 0 0 0 0.2rem rgba(110, 9, 110, 0.301);
+    outline: 0;
+    
+}
+
+#login-title {
+    color: grey;
+    font-family: 'Raleway', sans-serif;
+}
+
+#form-login {
+    padding: 15px 20px;
+    box-shadow: -2px 7px 32px 16px rgba(0,0,0,0.35);
+    border-radius: 5px;
+    background-color: white;
+}

@@ -6,6 +6,8 @@ import Register from './Auth/Register'
 import UserView from './UserView/UserView'
 import './App.css';
 import 'typeface-roboto'
+import 'typeface-shrikhand'
+import 'typeface-raleway'
 import "font-awesome/css/font-awesome.css"
 
 class App extends Component {
@@ -87,7 +89,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="app">
 
         {this.View()}
 
