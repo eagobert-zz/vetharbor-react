@@ -53,17 +53,17 @@ class EventList extends Component {
     render() {
 
         return (
-            <Grid item className="event-list">
-                <Grid container direction="column">
-                    <Grid item>
+            <Grid item className="event-list" xs={3}>
+      
+                  
                         <Typography>These are events</Typography>
-                    </Grid>
-                    <Grid item>
+                   
+                   
                          {this.state.userEvents.map(ues => {
                                 return <Typography key={ues.id}>{ues.name.text}</Typography>
                          })}
-                    </Grid>
-                </Grid>
+                   
+    
 
             </Grid>
         );

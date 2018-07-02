@@ -1,11 +1,4 @@
-.search{
-    display: flex;
-    flex-direction: column;
-    border: 2px solid purple;
-    max-width: 800px;
-    min-width: 600px;
-}
-
+.search,
 .search-input,
 .search-display{
     border: 2px solid purple;

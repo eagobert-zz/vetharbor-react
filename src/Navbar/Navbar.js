@@ -22,8 +22,8 @@ class Navbar extends Component {
         const UserName = ActiveUser.username
 
         return (
-            <Grid item className="navbar-container">
-                <Grid container direction="row">
+ 
+                <Grid container direction="row" className="navbar-container">
                     <AppBar id="navbar">
 
                         <Toolbar>
@@ -57,7 +57,7 @@ class Navbar extends Component {
                         </Toolbar>
                     </AppBar>
                 </Grid>
-            </Grid>);
+            );
 
     }
 }

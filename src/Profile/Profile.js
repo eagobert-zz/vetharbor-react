@@ -9,15 +9,15 @@ class Profile extends Component {
     render(){
 
         return(
-        <Grid item className="profile">
-                <Grid container direction="column">
-                <Typography variant="subheading">Profile</Typography>
-                <ProfilePhoto />
-                <Locations />
-                <Interests />
+  
+                <Grid item className="profile" xs={2}>
+                    <Typography variant="subheading">Profile</Typography>
+                    <ProfilePhoto />
+                    <Locations />
+                    <Interests />
                 </Grid>
             
-        </Grid>)
+       )
         
     }
 }

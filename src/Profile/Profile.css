@@ -1,20 +1,7 @@
-.profile{
-    border: 2px solid purple;
-    width: 400px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
-}
 
-img {
-    max-height: 175px;
-    max-width: 175px;
-}
-
+.profile,
 .interests,
 .locations,
 .profile-photo {
-    height: 250px;
-    width: 250px;
     border: 2px solid purple;
 }

@@ -42,13 +42,18 @@ class UserView extends Component{
 
     render(){
         return(
-        <Grid container className="user-view" spacing={40}>
-
-                {/* These components are grid items */}
-                <Navbar showView={this.props.showView}/>
-                <Profile key={this.state.ActiveUser.id}/>
-                <Search handleEventSave={this.handleEventSave}/>
-                <EventList key={this.state.eventId}/>
+        <Grid container className="user-view" spacing={40} direction="row">
+                <Grid item xs={12}>
+                    <Navbar showView={this.props.showView}/>
+                </Grid>
+                <Grid item xs={12}>
+                    <Grid container spacing={40}>
+                        <Profile key={this.state.ActiveUser.id}/>
+                        <Search handleEventSave={this.handleEventSave}/>
+                        <EventList key={this.state.eventId}/>
+                    
+                    </Grid>
+                </Grid>
    
            
         </Grid>
