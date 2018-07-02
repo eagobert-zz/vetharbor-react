@@ -62,8 +62,8 @@ componentDidMount(){
     render(){
 
         return(
-        <Grid item xs={7}>
-            <Grid className="search" container direction="column" >
+        <Grid item className="search" xs={7}>
+            <Grid container direction="column" >
                     <Grid item className="search-input">
                         <form onSubmit={this.handleSubmit}>
                             <input type="text" onChange={this.handleSearch} />

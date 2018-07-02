@@ -47,7 +47,7 @@ class UserView extends Component{
                     <Navbar showView={this.props.showView}/>
                 </Grid>
                 <Grid item xs={12}>
-                    <Grid container spacing={40}>
+                    <Grid className="main-display" container spacing={40}>
                         <Profile key={this.state.ActiveUser.id}/>
                         <Search handleEventSave={this.handleEventSave}/>
                         <EventList key={this.state.eventId}/>

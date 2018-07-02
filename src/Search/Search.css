@@ -6,6 +6,11 @@
 }
 
 .search-display{
-    height: 1000px;
+    /* height: 1000px; */
     overflow: scroll;
+}
+
+.search {
+    padding-top: 0;
+    padding-bottom: 0;
 }
