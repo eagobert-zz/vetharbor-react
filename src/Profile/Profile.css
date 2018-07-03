@@ -1,7 +1,32 @@
 
-.interests,
-.locations {
-    border: 2px solid purple;
+.locations,
+.interests {
+    padding-top: 15px;
+    height: 225px;
+    width: 225px;
+    margin: 0 15px 15px 15px;
+}
+
+.locations-card,
+.interests-card {
+    padding-top: 15px;
+    height: 160px;
+    width: 210px;
+    margin: 0 15px 15px 10px;
+    font-size: 10px;
+}
+
+.icon {
+    padding: 2px;
+}
+
+.chip {
+    display: inline-block;
+    width: auto;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
 }
 
 #profile {

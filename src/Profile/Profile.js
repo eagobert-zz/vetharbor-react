@@ -10,7 +10,7 @@ class Profile extends Component {
 
         return(
                 
-                <Grid container  direction="column">
+                <Grid container  direction="column" spacing={16}>
                     <Grid item xs={12}>
                         <Typography variant="subheading">Profile</Typography>
                     </Grid>
