@@ -24,15 +24,14 @@ input[type=text] {
 #search-display {
     margin: 50px 50px 0 50px;
     border-radius: 5px;
-    height: 850px;
+    /* height: 850px; */
     overflow: scroll;
     background-color: white;
 }
 
 
-#search,
-#search-input,
-#search-display {
+#search {
     padding: 0;
+    height: 850px;
   
 }

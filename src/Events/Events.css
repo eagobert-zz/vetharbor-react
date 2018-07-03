@@ -1,6 +1,13 @@
 
-.event-list{
-    border: 2px solid purple;
+#event-list{
+    background-color: white;
+    /* margin-left: 45px;
+    margin-right: 20px; */
+    border-radius: 5px;
+}
+
+#event-title{
+    padding-bottom: 10px;
 }
 
 .event-img > img {

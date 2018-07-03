@@ -53,10 +53,10 @@ class EventList extends Component {
     render() {
 
         return (
-            <Grid item className="event-list">
+            <Grid item id="event-list">
       
                   
-                        <Typography variant="subheading">Upcoming Events</Typography>
+                        <Typography id="event-title" variant="title">Upcoming Events</Typography>
                    
                    
                          {this.state.userEvents.map(ues => {

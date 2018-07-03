@@ -22,7 +22,7 @@
 }
 
 #form-login {
-    padding: 50px 100px;
+    padding: 50px 50px;
     box-shadow: -2px 7px 32px 16px rgba(0,0,0,0.35);
     border-radius: 5px;
     background-color: white;
@@ -30,4 +30,11 @@
 
 .form-fields {
     padding: 5px;
+}
+
+#login {
+    padding-left: 500px;
+    width: 800px;
+    height: 800px;
+
 }

@@ -1,10 +1,12 @@
 #header {
-    color: white;
+    color: purple;
     font-family: 'shrikhand', sans-serif;
+    padding-top: 50px;
 }
 #subheader {
     color: white;
-    font-family: 'raleway', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    padding-bottom: 50px;
 }
 
 #login-title {
