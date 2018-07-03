@@ -11,7 +11,7 @@ class Profile extends Component {
         return(
                 
                 <Grid container  direction="column">
-                    <Grid item >
+                    <Grid item xs={12}>
                         <Typography variant="subheading">Profile</Typography>
                     </Grid>
                     <ProfilePhoto />

@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Avatar } from '@material-ui/core'
 import '../Profile/Profile.css'
-import { Grid } from '@material-ui/core'
+import { IconButton, Grid, Input } from '@material-ui/core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 class ProfilePhoto extends Component {
@@ -60,30 +61,55 @@ class ProfilePhoto extends Component {
         
         if(this.state.imgUrl === null){
             return (
-                <Grid item className="profile-photo">
-                    <div className="img-preview">
-                        <Avatar id="avatar" src="http://placehold.it/175x175" alt="" />
+                <Grid item className="profile-photo" xs={12}>
+                    <Grid container direction="column">
+                        <Grid item className="img-preview" xs={12}>
+                            <Avatar id="avatar" src="http://placehold.it/175x175" alt="" />
                        
-                    </div>
-    
-                    <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
-                        <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
-                        <button type="submit" value="Submit!">Upload</button>
-                    </form>
+                        </Grid>
+                        <Grid item>
+                                <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
+                            <Grid container alignItems="center" spacing={0}>
+                                <Grid item xs={10}>
+                                    <Input type="file" id="input-imgUrl" name="imgUrl" onChange={this.handleImageUpload}disableUnderline fullWidth/>
+                                </Grid>
+                                <Grid item xs={2}>
+                                    <IconButton variant="extendedFab" type="submit" value="Submit!">
+                                        <FontAwesomeIcon className="icon" icon="save" size="sm" />
+                                    </IconButton>
+                                </Grid>
+                            </Grid>
+                                </form>
+                            
+                        </Grid>
+                    </Grid>
                 </Grid>
             )
         } else {
             return (
-                <Grid className="profile-photo">
-                    <div className="img-preview">
-                        <Avatar id="avatar" src={this.state.imgUrl} alt="" />
-                    </div>
-    
-                    <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
-                        <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
-                        <button type="submit" value="Submit!">Upload</button>
-                    </form>
+                <Grid item className="profile-photo" xs={12}>
+                <Grid container direction="column">
+                    <Grid item className="img-preview" xs={12}>
+                    <Avatar id="avatar" src={this.state.imgUrl} alt="" />
+                   
+                    </Grid>
+                    <Grid item>
+                            <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
+                        <Grid container alignItems="center" spacing={0}>
+                            <Grid item xs={10}>
+                                <Input type="file" id="input-imgUrl" name="imgUrl" onChange={this.handleImageUpload}disableUnderline fullWidth/>
+                            </Grid>
+                            <Grid item xs={2}>
+                                <IconButton variant="extendedFab" type="submit" value="Submit!">
+                                    <FontAwesomeIcon className="icon" icon="save" size="sm" />
+                                </IconButton>
+                            </Grid>
+                        </Grid>
+                            </form>
+                        
+                    </Grid>
                 </Grid>
+            </Grid>
             )
         }
     }

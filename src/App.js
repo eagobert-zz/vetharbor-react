@@ -11,9 +11,11 @@ import 'typeface-raleway'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 import { faUserCog } from '@fortawesome/free-solid-svg-icons'
+import { faSave} from '@fortawesome/free-solid-svg-icons'
 
 library.add(faSignOutAlt)
 library.add(faUserCog)
+library.add(faSave)
 
 class App extends Component {
 
