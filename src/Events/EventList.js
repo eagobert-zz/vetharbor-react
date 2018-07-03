@@ -53,7 +53,7 @@ class EventList extends Component {
     render() {
 
         return (
-            <Grid item className="event-list" xs={3}>
+            <Grid item className="event-list">
       
                   
                         <Typography>These are events</Typography>

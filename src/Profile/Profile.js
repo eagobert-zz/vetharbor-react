@@ -9,9 +9,11 @@ class Profile extends Component {
     render(){
 
         return(
-  
-                <Grid item className="profile" xs={2}>
-                    <Typography variant="subheading">Profile</Typography>
+                
+                <Grid container  direction="column">
+                    <Grid item >
+                        <Typography variant="subheading">Profile</Typography>
+                    </Grid>
                     <ProfilePhoto />
                     <Locations />
                     <Interests />

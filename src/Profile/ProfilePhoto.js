@@ -1,4 +1,8 @@
 import React, { Component } from 'react'
+import { Avatar } from '@material-ui/core'
+import '../Profile/Profile.css'
+import { Grid } from '@material-ui/core'
+
 
 class ProfilePhoto extends Component {
 
@@ -56,9 +60,9 @@ class ProfilePhoto extends Component {
         
         if(this.state.imgUrl === null){
             return (
-                <div className="profile-photo">
+                <Grid item className="profile-photo">
                     <div className="img-preview">
-                        <img src="http://placehold.it/175x175" alt="" />
+                        <Avatar id="avatar" src="http://placehold.it/175x175" alt="" />
                        
                     </div>
     
@@ -66,20 +70,20 @@ class ProfilePhoto extends Component {
                         <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
                         <button type="submit" value="Submit!">Upload</button>
                     </form>
-                </div>
+                </Grid>
             )
         } else {
             return (
-                <div className="profile-photo">
+                <Grid className="profile-photo">
                     <div className="img-preview">
-                        <img src={this.state.imgUrl} alt="" />
+                        <Avatar id="avatar" src={this.state.imgUrl} alt="" />
                     </div>
     
                     <form id="myPhotoForm" name="myPhotoForm" onSubmit={this.handleImageSave}>
                         <input type="file" id="imgUrl" name="imgUrl" onChange={this.handleImageUpload} />
                         <button type="submit" value="Submit!">Upload</button>
                     </form>
-                </div>
+                </Grid>
             )
         }
     }

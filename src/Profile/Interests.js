@@ -1,5 +1,6 @@
 //Purpose:  Component to displa a list of user interests by authenticated user
 import React, { Component } from 'react'
+import { Grid } from '@material-ui/core'
 
 class Interests extends Component {
 
@@ -27,12 +28,12 @@ class Interests extends Component {
     //Map through interests and display results
     render(){
         return(
-            <div className="interests">
+            <Grid item className="interests">
             <h4>Interests</h4>
                 {this.state.interests.map(interest => {
                    return <span key={interest.id}>{interest.keyword}, </span>
                 })}
-            </div>
+            </Grid>
         )
     }
 }

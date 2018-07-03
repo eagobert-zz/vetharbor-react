@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Grid } from '@material-ui/core'
 
 class Locations extends Component {
 
@@ -41,13 +42,13 @@ class Locations extends Component {
 
     render(){
         return(
-            <div className="locations">
+            <Grid item className="locations">
                 <h4>Locations</h4>
                 <span>{this.state.userHome}, </span> 
                 {this.state.locations.map(location => {
                    return <span key={location.id}>{location.location}, </span>
                 })}
-            </div>
+            </Grid>
         )
     }
 }
