@@ -1,4 +1,4 @@
-.event-img > img,
+
 .event-list{
     border: 2px solid purple;
 }
@@ -6,4 +6,16 @@
 .event-img > img {
     height: 200px;
     width: 200px;
+}
+
+#event-card{
+    height: 500px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#event-description{
+    height: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }

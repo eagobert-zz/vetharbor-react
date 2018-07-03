@@ -56,7 +56,7 @@ class EventList extends Component {
             <Grid item className="event-list">
       
                   
-                        <Typography>These are events</Typography>
+                        <Typography variant="subheading">Upcoming Events</Typography>
                    
                    
                          {this.state.userEvents.map(ues => {
