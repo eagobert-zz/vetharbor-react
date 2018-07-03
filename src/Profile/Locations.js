@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Card, Grid, Typography } from '@material-ui/core'
-import { Chip } from 'react-materialize'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Tag } from 'react-materialize'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '../Profile/Profile.css'
 
 class Locations extends Component {
@@ -44,7 +44,6 @@ class Locations extends Component {
     }
 
     render(){
-        const button =                        <FontAwesomeIcon className="icon" icon="times-circle" size="lg" />
      
         return(
             <Grid item className="locations" xs={12}>
@@ -54,17 +53,16 @@ class Locations extends Component {
                     </Grid>
                     <Grid item xs={12} >
                         <Card className="locations-card" raised>
-                            <Grid container direction="row" justify="flex-start" alignItems="center" wrap="wrap" spacing={0}>
-                                <Grid item xs>
-                                    <Chip className="chip"> {this.state.userHome}
-                                     {button} 
-                                    </Chip>
-                                </Grid>
+                           
+                           
+                                    <Tag className="chip"> {this.state.userHome} 
+                                    </Tag>
+                            
                                
                                 {this.state.locations.map(location => {
-                                    return <Grid key={location.id} item xs><Chip className="chip" key={location.id}>{location.location} {button}</Chip> </Grid>
+                                    return <Tag className="chip" key={location.id}>{location.location}</Tag> 
                                 })}
-                            </Grid>
+                        
                         </Card>
 
                     </Grid>

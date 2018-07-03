@@ -51,7 +51,7 @@ class UserView extends Component{
                         <Grid id="profile" item xs={2}>
                             <Profile key={this.state.ActiveUser.id}/>
                         </Grid>
-                        <Grid item xs={7}>
+                        <Grid item xs={6}>
                             <Search handleEventSave={this.handleEventSave}/>
                         </Grid>
                         <Grid item xs={3}>
@@ -61,7 +61,7 @@ class UserView extends Component{
                     </Grid>
                 </Grid>
    
-           
+    
         </Grid>
         )
     }

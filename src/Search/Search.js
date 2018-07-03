@@ -62,16 +62,16 @@ componentDidMount(){
     render(){
 
         return(
-        <Grid item className="search">
-            <Grid container direction="column" >
-                    <Grid item className="search-input">
+        <Grid item id="search">
+            <Grid container direction="column" spacing={40}>
+                    <Grid item id="search-input">
                         <form onSubmit={this.handleSubmit}>
                             <input type="text" onChange={this.handleSearch} />
                             <button>Enter</button>
                         </form>
                     </Grid>
 
-                    <Grid item className="search-display">
+                    <Grid item id="search-display">
 
                         {this.state.searchResults.length === 0 &&
                             this.state.onLoadSearchResults.map(event => {

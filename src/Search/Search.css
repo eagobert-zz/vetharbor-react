@@ -1,16 +1,29 @@
-.search,
-.search-input,
-.search-display{
-    border: 2px solid purple;
-    /* max-width: 300px; */
-}
 
-.search-display{
-    /* height: 1000px; */
+#search-input {
+    margin: 10px 30px 50px 30px;
+    border-radius: 5px;
+}
+#search-display {
+    margin: 50px 30px 0 30px;
+    border-radius: 5px;
+    height: 850px;
     overflow: scroll;
+    background-color: white;
 }
 
-.search {
-    padding-top: 0;
-    padding-bottom: 0;
+form {
+    padding: 20px 0;
+}
+
+#search,
+#search-input,
+#search-display {
+    padding: 0;
+  
+}
+
+#search-input,
+#search-display {
+ 
+    border: 2px solid purple;
 }
